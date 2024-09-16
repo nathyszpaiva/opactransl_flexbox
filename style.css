@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8e1e9; /* Cor de fundo suave */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos do Cabeçalho e Menu de Navegação */
+header {
+    background-color: #E18E96;
+    padding: 20px; /* Aumentado o padding */
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px; /* Aumentado o espaçamento entre os itens */
+}
+
+nav ul li a {
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    padding: 12px 24px; 
+    display: block;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #c7747c; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilos da Galeria de Fotos */
+.gallery {
+    flex-grow: 1; /* Faz a galeria ocupar o espaço disponível */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Garante que as colunas se ajustem */
+    gap: 15px;
+    padding: 20px;
+    align-items: center; /* Alinha as imagens verticalmente */
+    justify-items: center; /* Alinha as imagens horizontalmente */
+}
+
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 3px solid #E18E96; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px; /* Altura fixa para alinhamento perfeito */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorção */
+    border-radius: 10px;
+}
+
+/* Container da galeria usando Flexbox */
+.gallery-container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-around; /* Distribui os itens com espaço ao redor */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se não couberem */
+    padding: 50px;
+    width: 20%;
+    margin: auto; /*coloca o container para o meio automaticamente*/
+}
+.gallery-container:hover .gallery-item{
+    opacity: .5;
+}
+.gallery-container .gallery-item:hover {
+    opacity: 1
+}
+/* Cada item da galeria */
+.gallery-item {
+    transition: all .3s;
+}
+.gallery-item:hover{
+    transform: translateY(-20px)
+}
+
+/* Estilos para as imagens */
+.gallery-item img {
+    width: 100%; /* Garante que a imagem preencha todo o espaço disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/*Estilo geral do footer*/
+footer{
+    background-color: #E18E96;
+    color:white;
+    padding: 40px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section{
+    flex-basis: 23%; /*Faz com que as seções ocupem 23% da largura, com espaço para margens*/
+    margin-bottom: 20px;
+}
+
+.footer-section h4{
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.footer-section p, .footer-section ul{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.footer-section ul{
+    list-style-type: none;
+}
+
+.footer-section ul li{
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section p{
+    color: white;
+}
+
+.footer-section h4{
+    color: #4d4141;
+}
+
+.footer-section ul li a:hover{
+    color: #ffffff;
+}
+
+.social-links a{
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover{
+    color: #ffffff;
+}
+
+.footer-bottom{
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+    font-size: 14px;
+}
+
+.footer-bottom p{
+    margin: 0;
+}
+
